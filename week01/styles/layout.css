@@ -42,6 +42,7 @@ nav {
 }
 
 main {
+    display: flex;
     background-color: lightgray;
     grid-column: 1 / 3;
     color: black;
