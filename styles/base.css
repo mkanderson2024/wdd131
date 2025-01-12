@@ -21,12 +21,16 @@ h1 {
     font-family: "kanit";
 }
 
+.name {
+    color: yellow
+}
+
 nav {
     margin-bottom: 0;
 }
 
 .navigation {
-    margin-top: 4rem;
+    margin-top: 2rem;
     list-style: none;
     display: grid;
     grid-template-columns: repeat(4, .75fr);
@@ -118,6 +122,12 @@ h3 {
     padding-top: 50px;
     padding-bottom: 10px;
     margin: 15px auto;
+}
+
+.links {
+    display: block;
+    padding: 50px;
+    height: auto;
 }
 
 footer {
