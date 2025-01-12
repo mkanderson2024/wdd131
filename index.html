@@ -9,7 +9,11 @@
     <meta name="description" content="Home Page for Michael Anderson - WDD 131 - Dynamic Web Fundamentals">
     <meta name="keywords" content="Home, Michael, Anderson">
     <meta name="Author" content="Michael Anderson">
-    <script defer scr="getdates.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Kanit:wght@100;300;400&display=swap"
+        rel="stylesheet">
+    <script defer src="scripts/getdates.js"></script>
 </head>
 
 <body>
@@ -29,7 +33,7 @@
         <section class="card">
             <h2>About Me</h2>
             <div class="card-left">
-                <div>
+                <div class="background-info">
                     <p class="card-text">My name is Michael Anderson. I was born in the United States and live with my
                         family in Utah. I work for the
                         Utah Department of Transportation as an Inspector and focus my efforts on helping people get
@@ -38,38 +42,38 @@
                         overcoming it with hard work
                         and persistance.
                     </p>
-                </div>
 
-                <div>
-                    <figure><img class="image" src="images/michael.webp" alt="Michael" width="200"></figure>
+                    <h3>Utah, USA</h3>
+
+                    <div class="background-location">
+                        <p class=" location-info"> Utah is known for great desert beauty, towering mountains, and the
+                            Great
+                            Salt
+                            Lake. Located in the rocky mountains,
+                            Utah is also well known for having some of the greatest snow on earth, which was seen world
+                            wide
+                            during the 2002 Winter Olympics. Utah
+                            is expecting more of the Olymics in 2034 and is expected to more than triple its current
+                            population within the next 10 years.
+                        </p>
+                        <div>
+                            <img class="image" src="images/flag.webp" alt="Utah Flag" width="200">
+                            <span class="figcaption">Official Utah State Flag</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-left">
-                    <figure>
-                        <h3>Utah, USA</h3><img class="image" src="images/mountains.webp" alt="Michael" width="200">
-                        <figcaption class="caption">Mountains of Utah</figcaption>
-                    </figure>
-                </div>
-                <div>
-                    <p class="card-text"> Utah is known for great desert beauty, towering mountains, and the Great
-                        Salt
-                        Lake. Located in the rocky mountains,
-                        Utah is also well known for having some of the greatest snow on earth, which was seen world
-                        wide
-                        during the 2002 Winter Olympics. Utah
-                        is expecting more of the Olymics in 2034 and is expected to more than triple its current
-                        population within the next 10 years.
-                    </p>
-                </div>
+                <div class="profile-picture"><img src="images/michael.webp" alt="Michael" width="150"></div>
             </div>
+
         </section>
 
         <section class="card">
-            <h2>Dvelopment Resources</h2>
+            <h2>Web Dev Resources</h2>
         </section>
     </main>
     <footer>
-        <p class="foot-text">© <span id="currentyear"></span> Michael Anderson - Utah, USA</p>
-        <p id="lastModified"></p>
+        <p class="foot-text">© <span id="copyright-year"></span> Michael Anderson - Utah, USA</p>
+        <p id="lastModified">Last Modified: </p>
     </footer>
 </body>
 

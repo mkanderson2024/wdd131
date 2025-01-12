@@ -18,6 +18,7 @@ header {
 
 h1 {
     text-align: center;
+    font-family: "kanit";
 }
 
 nav {
@@ -61,42 +62,68 @@ main {
 h2 {
     padding: 5px;
     margin: 0px;
-    background-color: rgb(58, 39, 15);
+    background-color: steelblue;
     text-align: center;
     color: white;
     border-radius: 5px;
+    font-family: "kanit";
 }
 
 .card-text {
     color: black;
-    margin: 10px;
+    margin: 0 auto;
+    white-space: normal;
+    text-align: left;
+}
+
+.background-location {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.background-location img {
+    object-fit: cover
+}
+
+.location-info {
+    margin: 15px;
 }
 
 .card {
-    background-color: tan;
+    background-color: lightgray;
     margin: 1rem;
-    border: 3px solid rgb(58, 39, 15);
+    border: 3px solid steelblue;
     border-radius: 10px;
 }
 
 .card-left {
-    display: grid;
-    grid-template-columns: 500px 500px;
-    grid-column-start: 1rem;
-    padding: 2rem;
-    align-items: center;
-    justify-items: left;
+    display: flex;
+    margin: 10px 20px;
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+
+.profile-picture {
+    object-fit: cover;
+}
+
+.figcaption {
+    font-style: italic;
 }
 
 h3 {
     text-align: center;
     border-bottom: solid black;
+    width: 50%;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    margin: 15px auto;
 }
 
 footer {
     background-color: #333;
     padding-top: 1rem;
-    padding-bottom: 8rem;
+    padding-bottom: 2rem;
     text-align: center;
     grid-column: 1 / 4;
     color: #eee;
