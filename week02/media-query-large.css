@@ -1,0 +1,22 @@
+@media screen and (min-width: 640px) {
+    header {
+        max-width: 640px;
+        border: solid 2px lightgray;
+        margin: 1rem auto;
+        background-color: black;
+        padding: 1rem;
+        color: white;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 640px;
+        border: solid 2px lightgray;
+        margin: 1rem auto;
+        background-color: lightblue;
+        padding: 1rem;
+        grid-gap: 1rem;
+    }
+
+}

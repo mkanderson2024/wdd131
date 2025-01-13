@@ -1,0 +1,40 @@
+body {
+    font-family: "Roboto", serif;
+    font-style: normal;
+}
+
+header {
+    max-width: 640px;
+    border: solid 2px lightgray;
+    margin: 1rem auto;
+    background-color: lightblue;
+    padding: 1rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 640px;
+    border: solid 2px lightgray;
+    margin: 1rem auto;
+    background-color: lightblue;
+    padding: 1rem;
+    grid-gap: 1rem;
+}
+
+footer {
+    max-width: 640px;
+    border: solid 2px lightgray;
+    margin: 1rem auto;
+    background-color: lightblue;
+    padding: 1rem;
+}
+
+section {
+    background-color: azure;
+    padding: 1rem;
+}
+
+/* Alternatively the header main and footer and all have 1 declaration of "header, main, footer" {
+
+} */
