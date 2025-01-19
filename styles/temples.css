@@ -1,0 +1,72 @@
+header {
+    background-color: darkslategrey;
+    display: grid;
+    grid-gap: 1rem;
+    padding: 20px;
+    border: 1px solid azure
+}
+
+header,
+main {
+    margin: 0 auto;
+}
+
+h1 {
+    color: aliceblue;
+    font-family: "kanit";
+    font-size: 2rem;
+}
+
+nav {
+    background-color: rgb(42, 13, 56)
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+nav a {
+    display: block;
+    color: aliceblue;
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem;
+    font-size: larger;
+}
+
+nav a:hover {
+    background-color: aliceblue;
+}
+
+main {
+    max-width: 800px;
+    margin: 0. auto;
+}
+
+.pictures-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 4rem;
+    place-items: center;
+    padding: 1rem;
+}
+
+.active {
+    color: yellowgreen
+}
+
+figcaption {
+    text-align: center;
+}
+
+p {
+    color: aliceblue;
+    text-align: center;
+}
+
+footer {
+    grid-column: 1 / 5;
+    background-color: darkslategrey;
+}
