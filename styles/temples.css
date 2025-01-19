@@ -104,5 +104,3 @@ footer {
     grid-column: 1 / 5;
     background-color: darkslategrey;
 }
-
-@media (max-width: 740px) {}
