@@ -6,6 +6,10 @@ header {
     border: 1px solid azure
 }
 
+h2 {
+    text-align: center;
+}
+
 #menu {
     font-size: 2rem;
     font-weight: 700;
