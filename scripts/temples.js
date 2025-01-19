@@ -8,9 +8,9 @@ let lastModified = new Date(document.lastModified);
 modified.innerHTML += lastModified;
 
 const hambutton = document.querySelector('#menu');
-const navigation = document.querySelector('.navigation');
+const mainnav = document.querySelector('.navigation');
 
 hambutton.addEventListener('click', () => {
-    navigation.classList.toggle('show');
+    mainnav.classList.toggle('show');
     hambutton.classList.toggle('show');
 });
