@@ -6,6 +6,21 @@ header {
     border: 1px solid azure
 }
 
+#menu {
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: aliceblue
+}
+
+#menu::before {
+    content: "≡";
+}
+
 header,
 main {
     margin: 0 auto;
@@ -24,11 +39,20 @@ nav {
 nav ul {
     display: flex;
     flex-direction: column;
-    list-style-type: none;
+    list-style: none;
 }
 
-nav a {
-    display: block;
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.navigation a {
+    display: flex;
     color: aliceblue;
     text-decoration: none;
     text-align: center;
@@ -36,8 +60,20 @@ nav a {
     font-size: larger;
 }
 
-nav a:hover {
+.navigation li {
+    display: none;
+}
+
+.navigation a:hover {
     background-color: aliceblue;
+}
+
+.show li {
+    display: block;
+}
+
+#menu.show::before {
+    content: "X";
 }
 
 main {
