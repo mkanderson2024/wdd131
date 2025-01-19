@@ -14,7 +14,8 @@ header {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    color: aliceblue
+    color: aliceblue;
+    background: none;
 }
 
 #menu::before {
@@ -32,17 +33,14 @@ h1 {
     font-size: 2rem;
 }
 
-nav {
-    background-color: rgb(42, 13, 56)
-}
-
 nav ul {
     display: flex;
     flex-direction: column;
     list-style: none;
+    background-color: rgb(42, 13, 56);
 }
 
-.navigation {
+.navigation ul {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -69,7 +67,7 @@ nav ul {
 }
 
 .show li {
-    display: block;
+    display: grid;
 }
 
 #menu.show::before {
@@ -106,3 +104,5 @@ footer {
     grid-column: 1 / 5;
     background-color: darkslategrey;
 }
+
+@media (max-width: 740px) {}

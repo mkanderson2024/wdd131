@@ -1,17 +1,34 @@
 @media (min-width: 740px) {
+    #menu {
+        display: none;
+    }
+
     header {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 
-    nav ul {
-        justify-content: flex-end;
+    .navgiation {
+        display: flex;
         flex-direction: row;
+    }
+
+    .navigation li {
+        display: flex
+    }
+
+    .navigation ul {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        list-style-type: none;
         padding-right: 10px;
     }
 
-    nav a {
+    .navigation a {
         flex: 1 1 100%;
     }
+
+
 }
