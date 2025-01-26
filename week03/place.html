@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Kanit:wght@100;300;400&display=swap"
         rel="stylesheet">
+    <script defer src="scripts/place.js"></script>
 </head>
 
 <body>
@@ -53,27 +54,35 @@
                         </ul>
                     </div>
                 </div>
-
-                <div class="weather-container">
-                    <h2>Weather</h2>
-                    <li><label>Temperature:</label>
-                        <p></p>
-                    </li>
-                    <li><label>Conditions:</label>
-                        <p></p>
-                    </li>
-                    <li><label>Wind:</label>
-                        <p></p>
-                    </li>
-                    <li><label>Wind Chill:</label>
-                        <p></p>
-                    </li>
+                <h2>Weather</h2>
+                <div class="columns-2">
+                    <!-- Image Icon -->
+                    <div class="column-left">
+                        <ul>
+                            <li>
+                                <p class="data-type">Temperature:</p>
+                                <p class="data-type">Conditions:</p>
+                                <p class="data-type">Wind:</p>
+                                <p class="data-type">Wind Chill:</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column-right">
+                        <ul>
+                            <li>
+                                <p class="info">JavaScript</p>
+                                <p class="info">JavaScript</p>
+                                <p class="info">JavaScript</p>
+                                <p class="info">JavaScript</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
     </main>
     <footer>
         <p class="foot-text">© <span id="copyright-year"></span> Michael Anderson - Utah, USA</p>
-        <p class="location">Kailua-Kona</p>
+        <p class="location">Kailua-Kona, Hawaii</p>
         <p id="lastModified">Last Modified: </p>
     </footer>
 </body>

@@ -1,5 +1,6 @@
 * {
     padding: 0px;
+    margin: 0px;
 }
 
 :root {
@@ -7,9 +8,11 @@
     --background-color: #0B5351;
     --decorative-border: #00A9A5;
     --heading-text: white;
+    --standard-text: black;
+    --alt-bg-color: white;
 }
 
-main {
+body {
     background-color: var(--main-bg-color);
     padding: 0px;
 }
@@ -30,47 +33,60 @@ h1 {
 .hero {
     display: block;
     width: 400px;
-    margin-top: 0px;
-    margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
-    border-bottom: solid#00A9A5
+    border-bottom: solid var(--background-color);
 }
 
 h2 {
     text-align: center;
-    padding-top: 10px;
+    padding: 20px;
 }
 
 .data-container {
-    background-color: white;
+    background-color: var(--alt-bg-color);
     display: block;
     width: 400px;
-    margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 10px;
 }
 
 ul {
     list-style-type: none;
 }
 
-.columns {
+.columns,
+.columns-2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+}
+
+.columns {
+    border-bottom: solid lavender 1px;
+    padding-bottom: 30px;
 }
 
 .data-type {
     text-align: right;
+    font-weight: bold;
+    padding: 5px;
 }
 
 .info {
     text-align: left;
+    padding: 5px;
 }
-
-
 
 footer {
     background-color: var(--background-color);
-    color: white
+    color: var(--heading-text);
+    text-align: center;
+    font-size: larger;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
