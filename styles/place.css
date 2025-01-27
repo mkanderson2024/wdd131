@@ -26,10 +26,15 @@ h1 {
     border-bottom: solid var(--decorative-border) 20px;
     margin-left: auto;
     margin-right: auto;
+    font-family: "kanit"
 }
 
 picture {
     margin: 0px;
+}
+
+p {
+    font-family: "abel"
 }
 
 .hero {
