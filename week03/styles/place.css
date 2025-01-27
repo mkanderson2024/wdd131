@@ -32,12 +32,15 @@ picture {
     margin: 0px;
 }
 
+.hero {
+    border-bottom: 3px solid var(--background-color);
+}
+
 .hero image {
-    display: flex;
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-bottom: solid var(--background-color);
+
 }
 
 h2 {
@@ -110,12 +113,27 @@ svg {
     }
 
     .data-container {
-        background-color: var(--alt-bg-color);
-        display: block;
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-bottom: 10px;
+        position: absolute;
+        top: 30%;
+        left: 5%;
+    }
+
+    .weather-container {
+        position: absolute;
+        bottom: 30%;
+        right: 5%; 
+    }
+
+    h2 {
+        background-color: var(--decorative-border);
+        text-align: left;
+        position: relative;
+        right: 10px;
+        top: 10px;
+        padding: 10px;
+        margin-right: 25px;
+        margin-bottom: 25px;
+        color: var(--heading-text)
     }
 }
 
