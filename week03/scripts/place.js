@@ -22,7 +22,7 @@ const windchill = document.querySelector("#windchill");
 
 //If statment
 if (temp <= 50 && speed > 3) {
-    const windChillTemp = calcWindChill(temp, speed);
+    const windChillTemp = calculateWindChill(temp, speed);
     temperature.innerHTML = `${temp}`;
     condition.innerHTML = `Partly Cloudy`;
     wind.innerHTML = `${speed} mph`
@@ -36,6 +36,6 @@ else {
 }
 
 //Function
-function calcWindChill(u, v) {
+function calculateWindChill(u, v) {
     return Math.sqrt(Math.pow(u, 2) + Math.pow(v, 2));
 }
