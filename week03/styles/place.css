@@ -123,10 +123,12 @@ svg {
         right: 2%;
     }
 
-    svg::after {
-        property {
-            display: none;
-        }
+    .weather-container h2::after {
+        content: " 🌥";
+    }
+
+    svg {
+        display: none;
     }
 
     h2 {
