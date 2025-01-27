@@ -24,17 +24,19 @@ h1 {
     color: var(--heading-text);
     text-align: center;
     border-bottom: solid var(--decorative-border) 20px;
-    width: 400px;
     margin-left: auto;
     margin-right: auto;
 }
 
+picture {
+    margin: 0px;
+}
 
-.hero {
-    display: block;
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+.hero image {
+    display: flex;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
     border-bottom: solid var(--background-color);
 }
 
@@ -43,13 +45,9 @@ h2 {
     padding: 20px;
 }
 
-.data-container {
+.data-container,
+.weather-container {
     background-color: var(--alt-bg-color);
-    display: block;
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 10px;
 }
 
 ul {
@@ -86,7 +84,6 @@ footer {
     font-size: larger;
     padding-top: 20px;
     padding-bottom: 20px;
-    width: 400px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -96,12 +93,38 @@ svg {
     margin-left: auto;
     margin-right: auto;
     width: 100px;
-
-
 }
 
 .foot-text,
 .location {
     padding: 5px;
+}
 
+/* For screens larger than 400px */
+@media screen and (min-width: 500px) {
+    .hero {
+        position: relative;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .data-container {
+        background-color: var(--alt-bg-color);
+        display: block;
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .hero {
+        position: relative;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+
+    }
 }

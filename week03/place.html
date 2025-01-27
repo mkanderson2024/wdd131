@@ -19,8 +19,9 @@
     <main>
         <h1>Kailua-Kona, Hawaii</h1>
         <picture class="hero">
-            <source srcset="images/kona-large.webp" media="(min-width: 1000px)">
-            <img src="images/kona-small.webp" alt="Kailua-Kona, HI" width="400" height="533">
+            <source srcset="images/kona-large.webp" media="(min-width: 1000px)" width="100%">
+            <source srcset="images/kona-medium.webp" media="(min-width: 500px)" width="100%">
+            <img src="images/kona-small.webp" alt="Kailua-Kona, HI" width="500" height="633">
         </picture>
         <div class="main-container">
             <div class="data-container">
@@ -54,6 +55,8 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+            <div class="weather-container">
                 <h2>Weather</h2>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
                     <defs>
@@ -122,7 +125,6 @@
                             d="M378.92,301.75a51.75,51.75,0,0,1-17.73,100.37H220.54a62.24,62.24,0,1,1,19.18-121.44,73.75,73.75,0,0,1,87.48-28.16l1,.38a72.34,72.34,0,0,1,13.39,7c.22.14.44.28.65.43A73.93,73.93,0,0,1,369,292.77c.95,2.24,1.8,4.54,2.53,6.89A50.84,50.84,0,0,1,378.92,301.75Zm-1.74,89.92c18-6.89,29.22-25.11,28.18-44.17-1.11-20.22-16.43-36.41-35.82-40.61a6.37,6.37,0,0,1-5.31-5.44,67,67,0,0,0-31.6-38.11c-1-.52-1.91-1-2.89-1.49s-1.7-.8-2.57-1.18a66.85,66.85,0,0,0-13.82-4.31c-25.73-5-52.51,6.57-67.15,28.1-1.84,2.71-5.13,4.48-8.47,3.45-21.09-6.51-44.27-.51-58.65,16.18-.85,1-1.66,2-2.44,3a53.89,53.89,0,0,0-6,10.38,54.71,54.71,0,0,0,50,77.11c5.48.05,11,0,16.45,0H352.47C360.93,394.62,369.06,394.78,377.18,391.67Z" />
                     </g>
                 </svg>
-                <!-- <img class="icon" src="images/partly-cloudy-icon.svg" alt="Partly Cloudy"> -->
                 <div class="columns-2">
                     <div class="column-left">
                         <ul>
@@ -146,6 +148,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </main>
     <footer>
         <p class="foot-text">© <span id="copyright-year"></span> Michael Anderson - Utah, USA</p>
