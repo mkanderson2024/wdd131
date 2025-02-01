@@ -92,11 +92,10 @@ const temples = [
         templeName: "Logan Utah",
         location: "Logan, Utah, United States",
         dedicated: "1884, April, 30",
-        area: "119619",
+        area: 119619,
         imageUrl:
             "https://churchofjesuschristtemples.org/assets/img/temples/logan-utah-temple/logan-utah-temple-40550-main.jpg"
     },
-    // Add more temple objects here...
 ];
 
 createTempleCard(temples);
@@ -106,37 +105,36 @@ homeLink.addEventListener("click", () => {
     document.querySelector(".pictures-container").innerHTML = "";
     createTempleCard(temples);
     document.getElementById("h2").innerHTML = "Home";
-})
+});
 
 const oldLink = document.querySelector("#old")
 oldLink.addEventListener("click", () => {
     document.querySelector(".pictures-container").innerHTML = "";
-    createTempleCard(temples.filter(temple => temple.dedicated.includes("1888")))
-    createTempleCard(temples.filter(temple => temple.dedicated.includes("1884")))
+    createTempleCard(temples.filter(temple => temple.dedicated.substring(0, 4) < 1900));
     document.getElementById("h2").innerHTML = "Old: Built before 1900";
-})
-
-const largeLink = document.querySelector("#large")
-largeLink.addEventListener("click", () => {
-    document.querySelector(".pictures-container").innerHTML = "";
-    createTempleCard(temples.filter(temple => temple.area.includes("2005")))
-    document.getElementById("h2").innerHTML = "Large";
-})
-
+});
 
 const newLink = document.querySelector("#new")
 newLink.addEventListener("click", () => {
     document.querySelector(".pictures-container").innerHTML = "";
-    createTempleCard(temples.filter(temple => temple.dedicated.includes("2005")))
-    createTempleCard(temples.filter(temple => temple.dedicated.includes("2015")))
-    createTempleCard(temples.filter(temple => temple.dedicated.includes("2020")))
-    createTempleCard(temples.filter(temple => temple.dedicated.includes("1974")))
-    createTempleCard(temples.filter(temple => temple.dedicated.includes("1986")))
-    createTempleCard(temples.filter(temple => temple.dedicated.includes("1983")))
-    createTempleCard(temples.filter(temple => temple.dedicated.includes("2012")))
-    createTempleCard(temples.filter(temple => temple.dedicated.includes("1993")))
-    document.getElementById("h2").innerHTML = "New: Built after 1990";
+    createTempleCard(temples.filter(temple => temple.dedicated.substring(0, 4) > 2000));
+    document.getElementById("h2").innerHTML = "New: Built after 2000";
 })
+
+const largeLink = document.querySelector("#large")
+largeLink.addEventListener("click", () => {
+    document.getElementById("h2").innerHTML = "Large";
+    document.querySelector(".pictures-container").innerHTML = "";
+    createTempleCard(temples.filter(temple => temple.area > 90000));
+});
+
+const smallLink = document.querySelector("#small");
+smallLink.addEventListener("click", () => {
+    document.querySelector(".pictures-container").innerHTML = "";
+    createTempleCard(temples.filter(temple => temple.area < 10000));
+    document.getElementById("h2").innerHTML = "Small";
+});
+
 function createTempleCard(filteredTemples) {
     filteredTemples.forEach(temple => {
         let card = document.createElement("section");
