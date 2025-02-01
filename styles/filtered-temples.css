@@ -1,0 +1,156 @@
+header {
+    background-color: darkslategrey;
+    display: grid;
+    grid-gap: 1rem;
+    padding: 20px;
+    border: 1px solid azure
+}
+
+h2 {
+    text-align: center;
+}
+
+#menu {
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: aliceblue;
+    background: none;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+header,
+main {
+    margin: 0 auto;
+}
+
+h1 {
+    color: aliceblue;
+    font-family: "kanit";
+    font-size: 2rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: rgb(42, 13, 56);
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.navigation a {
+    display: flex;
+    color: aliceblue;
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem;
+    font-size: larger;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a:hover {
+    background-color: aliceblue;
+}
+
+.show li {
+    display: grid;
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+main {
+    margin: 0 auto;
+}
+
+.pictures-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 4rem;
+    place-items: center;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.active {
+    color: yellowgreen
+}
+
+figcaption {
+    text-align: center;
+}
+
+p {
+    color: black;
+    font-family: abel;
+}
+
+.foot-text {
+    color: aliceblue;
+    text-align: center;
+}
+
+footer {
+    grid-column: 1 / 5;
+    background-color: darkslategrey;
+}
+
+@media (min-width: 740px) {
+    #menu {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        background-color: rgb(42, 13, 56);
+    }
+
+    .navgiation {
+        display: flex;
+    }
+
+    .navigation li {
+        display: flex
+    }
+
+    .navigation ul {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        list-style-type: none;
+        padding-right: 10px;
+    }
+
+    .navigation a {
+        flex: 1 1 100%;
+    }
+
+
+}
