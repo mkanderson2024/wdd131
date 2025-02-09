@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="author" content="Michael Anderson">
+    <meta name="description" content="form assignment">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Product Review</h1>
+        <form method="get" action="review.html" class="review">
+            <!-- Product Name -->
+            <fieldset>
+                <legend>* Product Name</legend>
+                <label>
+                    <select id="products" required>
+                        <option value="" selected disabled hidden>Choose Product....</option>
+                    </select></label>
+
+            </fieldset>
+            <!-- Ratings -->
+            <fieldset>
+                <legend>* Overall Rating</legend>
+                <label><input type="radio" name="rating" value="stars" required>⭐</label>
+                <label><input type="radio" name="rating" value="stars" required>⭐⭐</label>
+                <label><input type="radio" name="rating" value="stars" required>⭐⭐⭐</label>
+                <label><input type="radio" name="rating" value="stars" required>⭐⭐⭐⭐</label>
+                <label><input type="radio" name="rating" value="stars" required>⭐⭐⭐⭐⭐</label>
+            </fieldset>
+            <!-- Date of Instillation -->
+            <fieldset>
+                <legend>* Date of Instillation</legend>
+                <label><input type="date" id="instillation-date" name="completedDate" required></label>
+            </fieldset>
+            <!-- Useful features -->
+            <fieldset>
+                <legend>Which features did you find useful in the product?</legend>
+                <div>(Check all that apply)</div>
+                <label><input type="checkbox" name="durability" value="yes"> Durability </label>
+                <label><input type="checkbox" name="use" value="yes"> Ease of Use </label>
+                <label><input type="checkbox" name="performance" value="yes"> Performance </label>
+                <label><input type="checkbox" name="design" value="yes"> Design </label>
+            </fieldset>
+            <fieldset>
+                <legend>Written Review</legend>
+                <label><textarea id="text" name="text-box" rows="6" cols="50">Enter Text HERE</textarea></label>
+            </fieldset>
+            <fieldset>
+                <legend>Your Name</legend>
+                <label><input type="text" id="user" name="name"></label>
+            </fieldset>
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p class="foot-text">© <span id="copyright-year"></span> Michael Anderson - Utah, USA</p>
+        <p id="lastModified">Last Modified: </p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+main {
+    max-width: 500px;
+    padding: 0px;
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+    min-height: 20rem;
+}
+
+h1 {
+    background-color: rgb(51, 70, 19);
+    color: white;
+    margin: 0 0 1rem 0;
+    padding: 5px;
+    text-align: center;
+}
+
+.review label {
+    display: block;
+    padding-top: 1rem;
+    font-size: .9rem;
+}
+
+.review {
+    background-color: rgb(156, 172, 132);
+}
+
+footer {
+    background-color: rgb(51, 70, 19);
+    max-width: 500px;
+    margin: 0 1rem;
+    color: white;
+    text-align: center;
+    padding: 1px;
+}
+
+.revew legend {
+    padding: 0 .5rem;
+}
+
+.review input[type="checkbox"] {
+
+    margin-right: 6px;
+    padding: 10px
+}
+
+.review input[type="submit"] {
+    padding: .8rem;
+    margin: 2rem 2% 2rem 3%;
+    width: 96%;
+    max-width: 200px;
+}
