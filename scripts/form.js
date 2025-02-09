@@ -43,16 +43,27 @@ for (let i = 0; i < products.length; i++) {
     const newElement = document.createElement("option");
     newElement.textContent = (products[i].name).toUpperCase();
     parentElement.appendChild(newElement);
-}
+};
 
-const submissions = document.querySelectorAll
+const submissions = document.querySelectorAll;
 
 //Submission button listener
 
 const button = document.querySelector('button');
-const submission = 0;
+const submission = localStorage.getItem('key');
+const retrievedInteger = paresInt(submission, 10);
 
 button.addEventListner('click', function () {
+    submission = retrievedInteger;
     submission += 1;
-    console.log(submission)
-})
+    storeSubmissionCount(submission);
+});
+
+function storeSubmissionCount(number) {
+    submission = number
+    localStorage.setItem('key', submission.toString())
+};
+
+const submitted = document.getElementById("submissions");
+let submissionPrinted = retrievedInteger;
+submitted.innerHTML += submissionPrinted;
