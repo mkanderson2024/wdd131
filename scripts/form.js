@@ -53,7 +53,7 @@ const parentElement = document.getElementById("products");
 // }
 for (let i = 0; i < products.length; i++) {
     const newElement = document.createElement("option");
-    newElement.textContent = (products[i].name);
+    newElement.textContent = (products[i].name).toUpperCase();
     parentElement.appendChild(newElement);
 }
 
