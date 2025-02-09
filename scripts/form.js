@@ -8,12 +8,7 @@ const modified = document.getElementById("lastModified");
 let lastModified = new Date(document.lastModified);
 modified.innerHTML += lastModified;
 
-// const button = document.querySelector('click', function);
-
-// function CheckBoxRequired{
-
-// }
-
+//List creation for drop down menut
 const products = [
     {
         id: "fc-1888",
@@ -44,18 +39,20 @@ const products = [
 
 const parentElement = document.getElementById("products");
 
-// let htmlContent = "";
-
-// for (let i = 0; i < products.length; i++) {
-//     const value = (products[i].name);
-//     htmlContent += `<option>${value}</option>`
-//     document.getElementById("products").appendChild;
-// }
 for (let i = 0; i < products.length; i++) {
     const newElement = document.createElement("option");
     newElement.textContent = (products[i].name).toUpperCase();
     parentElement.appendChild(newElement);
 }
 
-// options.innerHTML = htmlContent;
-// }
+const submissions = document.querySelectorAll
+
+//Submission button listener
+
+const button = document.querySelector('button');
+const submission = 0;
+
+button.addEventListner('click', function () {
+    submission += 1;
+    console.log(submission)
+})
