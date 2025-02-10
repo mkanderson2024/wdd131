@@ -21,6 +21,12 @@ p {
     font-family: "abel";
 }
 
+.active {
+    background-color: var(--heading-bg-color);
+    border-top: solid var(--decorative-border) 2px;
+    border-bottom: solid var(--decorative-border) 2px;
+}
+
 /* -----------------------Small Screens-------------------------- */
 /* ----------Data Container---------- */
 .columns {
@@ -164,6 +170,27 @@ footer {
     font-family: "kanit";
 }
 
+/* ----------Picture Container---------- */
+.pictures-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 4rem;
+    place-items: center;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+h4 {
+    font-family: "kanit";
+    background-color: var(--heading-bg-color);
+    color: var(--heading-tab-text);
+    padding: 10px;
+    border-radius: 1rem;
+    border-bottom: solid #ffb703 3px;
+    text-align: left;
+    font-family: "kanit";
+}
+
 /* -----------------------Medium Screens-------------------------- */
 /* -----------------------Larger Screens---------------------------*/
 
@@ -192,6 +219,7 @@ footer {
         background-color: var(--alternate-bg);
     }
 
+    /*---------Navigatio Bar---------*/
     .navgiation {
         display: flex;
     }

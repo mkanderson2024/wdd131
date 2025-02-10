@@ -41,5 +41,40 @@ function handleMediaChange(event) {
 // Attach the event listener
 mediaQuery.addEventListener('change', handleMediaChange);
 
-// Initial check (optional, to run the function on page load)
+// Initial check to run the function on page load)
 handleMediaChange(mediaQuery);
+
+//--------- Lists ----------
+const aircrafts = [
+    {
+        aircraftName: "Hornet",
+        pcu: "6116",
+        imageURL: "https://steamuserimages-a.akamaihd.net/ugc/2021597657835286280/CAD379665B7236DE1E014E739AD50A4CB017DB35/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
+    }
+];
+
+createAircraftCard(aircrafts);
+
+function createAircraftCard(filteredAircraft) {
+    filteredAircraft.forEach(aircraft => {
+        let card = document.createElement("section");
+        let name = document.createElement("h4");
+        let pcu = document.createElement("p")
+        let img = document.createElement("img")
+
+        name.innerHTML = `${aircraft.aircraftName}`;
+        pcu.innerHTML = `<span class="label">PCU:</span> ${aircraft.pcu}`;
+        img.setAttribute("src", aircraft.imageURL);
+        img.setAttribute("alt", `${aircraft.aircraftName} Aircraft`);
+        img.setAttribute("loading", "lazy");
+        img.setAttribute("width", "200");
+        img.setAttribute("height", "150")
+
+        card.appendChild(name);
+        card.appendChild(pcu);
+        card.appendChild(img);
+
+        document.querySelector(".pictures-container").appendChild(card);
+
+    })
+}
