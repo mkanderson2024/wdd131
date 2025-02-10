@@ -1,0 +1,166 @@
+/* --------General Declerations-------- */
+:root {
+    --main-bg-color: #e0e1dd;
+    --heading-bg-color: #023e8a;
+    --heading-tab-text: #ffffff;
+    --decorative-border: #ffb703;
+    --alternate-bg: rgb(44, 44, 44);
+
+}
+
+header,
+main {
+    margin: 0 auto;
+    border-radius: 1rem;
+    background-color: var(--main-bg-color);
+}
+
+
+
+/*--------header-------- */
+h1 {
+    font-family: "kanit";
+    font-size: 80px;
+}
+
+header {
+    font-family: "kanit";
+    background-color: var(--heading-bg-color);
+    color: var(--heading-tab-text);
+    padding-left: 1rem;
+    border-bottom: solid #ffb703 2px;
+    text-align: left;
+    font-family: "kanit";
+}
+
+#menu {
+    font-size: 8rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 10px;
+    padding: 0px 0px;
+    position: absolute;
+    top: .50rem;
+    right: 1rem;
+    color: var(--heading-tab-text);
+    background: none;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: var(--alternate-bg);
+    color: var(--heading-tab-text);
+    border-radius: 1rem;
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0 auto;
+}
+
+.navigation a {
+    display: flex;
+    color: var(--heading-tab-text);
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem;
+    font-size: larger;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a:hover {
+    background-color: var(--heading-tab-text);
+    color: var(--heading-bg-color);
+    border: solid var(--decorative-border) 2px;
+    border-radius: 10rem;
+    margin: 0;
+}
+
+
+.show li {
+    display: grid;
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+h2 {
+    font-family: "kanit";
+    background-color: var(--heading-bg-color);
+    color: var(--heading-tab-text);
+    padding: 10px;
+    border-radius: 1rem;
+    border-bottom: solid #ffb703 2px;
+    text-align: left;
+    font-family: "kanit";
+}
+
+/* ----------Hero---------- */
+.hero {
+    margin: 0 auto;
+    max-width: fit-content;
+}
+
+/* ----------Footer---------- */
+
+/* Larger Screens */
+
+@media (min-width: 1200px) {
+    h1 {
+        font-family: "kanit";
+        font-size: 60px;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        background-color: var(--alternate-bg);
+    }
+
+    .navgiation {
+        display: flex;
+    }
+
+    .navigation li {
+        display: flex
+    }
+
+    .navigation ul {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        list-style-type: none;
+        padding-right: 10px;
+    }
+
+    .navigation a {
+        flex: 1 1 100%;
+    }
+
+
+}

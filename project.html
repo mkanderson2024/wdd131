@@ -19,14 +19,16 @@
 <body>
     <header>
         <h1>Interplanetary Enforcement Corps</h1>
-        <ul class="navigation">
-            <li><a href="" title="Aircraft">Aircraft</a> </li>
-            <li><a href="" title="Aquatic">Aquatic</a></li>
-            <li><a href="" title="Creative">Creative</a></li>
-            <li><a href="" title="Planet">Planet</a></li>
-            <li><a href="" title="Space">Space</a></li>
-            <li><a href="" title="Vehicles">Vehicles</a></li>
-        </ul>
+        <a id="menu" href="#"></a>
+        <nav>
+            <ul class="navigation">
+                <li><a href="" title="Aircraft">Aircraft</a> </li>
+                <li><a href="" title="Aquatic">Aquatic</a></li>
+                <li><a href="" title="Creative">Creative</a></li>
+                <li><a href="" title="Planet">Planet</a></li>
+                <li><a href="" title="Space">Space</a></li>
+                <li><a href="" title="Vehicles">Vehicles</a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -35,11 +37,44 @@
             <picture class="hero">
                 <source srcset="images/iechero-large.webp" media="(min-width: 750px)" width="2000">
                 <source srcset="images/iechero-medium.webp" media="(min-width: 600px)" width="700">
-                <img src="images/iechero-small.webp" alt="Space Pic" width="500" heigt="281">
+                <img src="images/iechero-small.webp" alt="Space Pic" width="500" height="281" loading="lazy">
             </picture>
         </div>
+        <div class="main-container">
+            <div class="data-container">
+                <h2>Statistics</h2>
+                <div class="columns">
+                    <div class="column-left">
+                        <ul>
+                            <li>
+                                <p class="data-type">Author:</p>
+                                <p class="data-type">Builds:</p>
+                                <p class="data-type">Collections:</p>
+                                <p class="data-type">Followers:</p>
+                                <p class="data-type">Play Time:</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column-right">
+                        <ul>
+                            <li>
+                                <p class="info">Luvstruckmango</p>
+                                <p class="info">270</p>
+                                <p class="info">6</p>
+                                <p class="info">277</p>
+                                <p class="info">7213.1 hrs</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
-    <footer></footer>
+    <footer>
+        <p class="foot-text">© <span id="copyright-year"></span> Michael Anderson - Utah, USA</p>
+        <p id="lastModified">Last Modified: </p>
+    </footer>
 </body>
 
 </html>
