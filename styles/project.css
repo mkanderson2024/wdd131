@@ -9,15 +9,48 @@
 }
 
 header,
-main {
+main,
+footer {
     margin: 0 auto;
+    padding-bottom: 2rem;
     border-radius: 1rem;
     background-color: var(--main-bg-color);
 }
 
+p {
+    font-family: "abel";
+}
+
+/* -----------------------Small Screens-------------------------- */
+/* ----------Data Container---------- */
+.columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+}
+
+.data-container {
+    background-color: var(--main-bg-color);
+    border-radius: 1rem;
+}
+
+.data-type {
+    text-align: right;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.info {
+    text-align: left;
+    padding: 5px;
+}
+
+ul {
+    list-style-type: none
+}
 
 
-/*--------header-------- */
+/*-----------header------------ */
 h1 {
     font-family: "kanit";
     font-size: 80px;
@@ -28,7 +61,7 @@ header {
     background-color: var(--heading-bg-color);
     color: var(--heading-tab-text);
     padding-left: 1rem;
-    border-bottom: solid #ffb703 2px;
+    border-bottom: solid #ffb703 3px;
     text-align: left;
     font-family: "kanit";
 }
@@ -98,13 +131,14 @@ nav ul {
     content: "X";
 }
 
-h2 {
+h2,
+h3 {
     font-family: "kanit";
     background-color: var(--heading-bg-color);
     color: var(--heading-tab-text);
     padding: 10px;
     border-radius: 1rem;
-    border-bottom: solid #ffb703 2px;
+    border-bottom: solid #ffb703 3px;
     text-align: left;
     font-family: "kanit";
 }
@@ -112,14 +146,30 @@ h2 {
 /* ----------Hero---------- */
 .hero {
     margin: 0 auto;
-    max-width: fit-content;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 /* ----------Footer---------- */
+footer {
+    font-family: "kanit";
+    background-color: var(--heading-bg-color);
+    color: var(--heading-tab-text);
+    margin: 0rem;
+    padding: 10px;
+    border-radius: 1rem;
+    border-top: solid #ffb703 3px;
+    text-align: center;
+    font-family: "kanit";
+}
 
-/* Larger Screens */
+/* -----------------------Medium Screens-------------------------- */
+/* -----------------------Larger Screens---------------------------*/
 
 @media (min-width: 1200px) {
+
+    /* ----------Header---------- */
     h1 {
         font-family: "kanit";
         font-size: 60px;
@@ -162,5 +212,41 @@ h2 {
         flex: 1 1 100%;
     }
 
+    /* ----------Hero Imeage---------- */
+    .hero {
+        max-width: 1000px;
+        position: relative;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
 
+    /* ----------Main------------------ */
+    .columns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+        margin: 0 .5rem;
+
+    }
+
+    .data-container {
+        position: absolute;
+        top: 35%;
+        left: 2%;
+    }
+
+    h3 {
+        background-color: var(--heading-bg-color);
+        color: var(--heading-tab-text);
+        border-radius: 1rem;
+        border: solid #ffb703 3px;
+        text-align: left;
+        position: relative;
+        right: 10px;
+        top: 10px;
+        padding: 10px;
+        margin-right: 25px;
+        margin-bottom: 25px;
+    }
 }
