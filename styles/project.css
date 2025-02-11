@@ -176,7 +176,8 @@ footer {
 .aquatic-container,
 .bases-container,
 .creative-container,
-.space-container {
+.space-container,
+.vehicles-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 1rem;

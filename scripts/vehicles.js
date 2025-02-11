@@ -47,19 +47,75 @@ handleMediaChange(mediaQuery);
 //--------- Lists ----------
 const vehicles = [
     {
-        vehicleName: "IEC Intrepidus",
-        pcu: "63300",
+        vehicleName: "IEC Excelsius",
+        pcu: "23180",
+        armor: "Light",
+        power: "Battery/Hydrogen",
+        imageURL:
+            "https://steamuserimages-a.akamaihd.net/ugc/2262557817140166585/492DCCCF2C47D2CB3E9BFF1D96C4322C2A4F5849/?imw=268&imh=151&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+    },
+    {
+        vehicleName: "IEC Raptor",
+        pcu: "2855",
         armor: "Heavy",
+        power: "Battery/Hydrogen",
+        imageURL:
+            "https://steamuserimages-a.akamaihd.net/ugc/2263685880292456120/F4EDCA11233A0174E315A4EC751847B0BF546EE0/?imw=268&imh=151&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+    },
+    {
+        vehicleName: "IEC Obsidian",
+        pcu: "36720",
+        armor: "Light",
+        power: "Battery/Hydrogen",
+        imageURL:
+            "https://steamuserimages-a.akamaihd.net/ugc/2262562981875073959/28F95523CB469E7663AA5E213B7EB960AAA284AF/?imw=268&imh=151&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+    },
+    {
+        vehicleName: "IEC Roaken MK2-HT",
+        pcu: "4548",
+        armor: "Heavy",
+        power: "Battery/Hydrogen",
+        imageURL:
+            "https://steamuserimages-a.akamaihd.net/ugc/791993107341368188/0FAC398E713FA89A2AB7FAD72A0E6BAEF200A91A/?imw=268&imh=151&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+    },
+    {
+        vehicleName: "IEC Granite",
+        pcu: "32321",
+        armor: "Heavy",
+        power: "Battery/Hydrogen",
+        imageURL:
+            "https://steamuserimages-a.akamaihd.net/ugc/2262559176039910596/489D19E9EE3A70D569435B9B6615F53A22133E78/?imw=268&imh=151&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+    },
+    {
+        vehicleName: "IEC Salvage Runner",
+        pcu: "1755",
+        armor: "Heavy",
+        power: "Battery/Hydrogen",
+        imageURL:
+            "https://steamuserimages-a.akamaihd.net/ugc/2262558840924165279/1879FA96EC9E4C53F2FBBDBA190C2E2F2332C57C/?imw=268&imh=151&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+    },
+    {
+        vehicleName: "IEC Wolver HAV Mk2",
+        pcu: "1755",
+        armor: "Heavy",
+        power: "Battery/Hydrogen",
+        imageURL:
+            "https://steamuserimages-a.akamaihd.net/ugc/2056511879299828192/914C4B892DB8FCD1D1669E470864BB6BB4E5D0DC/?imw=268&imh=151&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+    },
+    {
+        vehicleName: "IEC Lunar Crawler",
+        pcu: "17046",
+        armor: "Light",
         power: "Battery/Reactor",
         imageURL:
-            "https://steamuserimages-a.akamaihd.net/ugc/934938005825922339/9DCAE6B56E5807840521F79FC02382284E21CD0A/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+            "https://steamuserimages-a.akamaihd.net/ugc/1812129977693522719/8E2E4CCDF4283C356950DAE5CDFAC631E6C509B1/?imw=268&imh=151&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
     }
 ];
 
-createAquaticCard(spaceships);
+createAquaticCard(vehicles);
 
-function createAquaticCard(filteredSpacships) {
-    filteredSpacships.forEach(spaceship => {
+function createAquaticCard(filteredVehicles) {
+    filteredVehicles.forEach(vehicle => {
         let card = document.createElement("section");
         let name = document.createElement("h4");
         let pcu = document.createElement("p")
@@ -67,12 +123,12 @@ function createAquaticCard(filteredSpacships) {
         let power = document.createElement("p")
         let img = document.createElement("img")
 
-        name.innerHTML = `${spaceship.spaceshipName}`;
-        pcu.innerHTML = `<span class="label">PCU:</span> ${spaceship.pcu}`;
-        armor.innerHTML = `<span class="label">Armor:</span> ${spaceship.armor}`;
-        power.innerHTML = `<span class="label">Power:</span> ${spaceship.power}`;
-        img.setAttribute("src", spaceship.imageURL);
-        img.setAttribute("alt", `${spaceship.spaceshipName} Spaceships`);
+        name.innerHTML = `${vehicle.vehicleName}`;
+        pcu.innerHTML = `<span class="label">PCU:</span> ${vehicle.pcu}`;
+        armor.innerHTML = `<span class="label">Armor:</span> ${vehicle.armor}`;
+        power.innerHTML = `<span class="label">Power:</span> ${vehicle.power}`;
+        img.setAttribute("src", vehicle.imageURL);
+        img.setAttribute("alt", `${vehicle.vehicleName} Spaceships`);
         img.setAttribute("loading", "lazy");
         img.setAttribute("width", "200");
         img.setAttribute("height", "150")
@@ -83,6 +139,6 @@ function createAquaticCard(filteredSpacships) {
         card.appendChild(power);
         card.appendChild(img);
 
-        document.querySelector(".space-container").appendChild(card);
+        document.querySelector(".vehicles-container").appendChild(card);
     });
 }
