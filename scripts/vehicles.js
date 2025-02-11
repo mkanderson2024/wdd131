@@ -45,54 +45,44 @@ mediaQuery.addEventListener('change', handleMediaChange);
 handleMediaChange(mediaQuery);
 
 //--------- Lists ----------
-const bases = [
+const vehicles = [
     {
-        buildName: "Rover Test Facility",
-        purpose: "Create better rovers",
-        type: "World",
+        vehicleName: "IEC Intrepidus",
+        pcu: "63300",
+        armor: "Heavy",
+        power: "Battery/Reactor",
         imageURL:
-            "https://steamuserimages-a.akamaihd.net/ugc/1770449977198291637/71BE11531A13B882FA5861818C590502F58B8406/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
-    },
-    {
-        buildName: "IFMN Encounter Mod",
-        purpose: "Add encounters to the game",
-        type: "Mod",
-        imageURL:
-            "https://steamuserimages-a.akamaihd.net/ugc/2017093333330216733/3D174DFC7A5AC5EAE23801D57FC8FBC1DD0A816C/?imw=268&imh=151&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
-    },
-    {
-        buildName: "IECN Encounter Mod",
-        purpose: "Add encounters to the game",
-        type: "Mod",
-        imageURL:
-            "https://steamuserimages-a.akamaihd.net/ugc/2017093333342405439/E39851BE8E543D3F83797AF44BF47C22A3A0210B/?imw=268&imh=151&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+            "https://steamuserimages-a.akamaihd.net/ugc/934938005825922339/9DCAE6B56E5807840521F79FC02382284E21CD0A/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
     }
 ];
 
-createAquaticCard(bases);
+createAquaticCard(spaceships);
 
-function createAquaticCard(filteredBuild) {
-    filteredBuild.forEach(build => {
+function createAquaticCard(filteredSpacships) {
+    filteredSpacships.forEach(spaceship => {
         let card = document.createElement("section");
         let name = document.createElement("h4");
-        let purpose = document.createElement("p")
-        let type = document.createElement("p")
+        let pcu = document.createElement("p")
+        let armor = document.createElement("p")
+        let power = document.createElement("p")
         let img = document.createElement("img")
 
-        name.innerHTML = `${build.buildName}`;
-        purpose.innerHTML = `<span class="label">Purpose:</span> ${build.purpose}`;
-        type.innerHTML = `<span class="label">Armor:</span> ${build.type}`;
-        img.setAttribute("src", build.imageURL);
-        img.setAttribute("alt", `${build.buildName} Creative Items`);
+        name.innerHTML = `${spaceship.spaceshipName}`;
+        pcu.innerHTML = `<span class="label">PCU:</span> ${spaceship.pcu}`;
+        armor.innerHTML = `<span class="label">Armor:</span> ${spaceship.armor}`;
+        power.innerHTML = `<span class="label">Power:</span> ${spaceship.power}`;
+        img.setAttribute("src", spaceship.imageURL);
+        img.setAttribute("alt", `${spaceship.spaceshipName} Spaceships`);
         img.setAttribute("loading", "lazy");
         img.setAttribute("width", "200");
         img.setAttribute("height", "150")
 
         card.appendChild(name);
-        card.appendChild(purpose);
-        card.appendChild(type);
+        card.appendChild(pcu);
+        card.appendChild(armor);
+        card.appendChild(power);
         card.appendChild(img);
 
-        document.querySelector(".creative-container").appendChild(card);
+        document.querySelector(".space-container").appendChild(card);
     });
 }
