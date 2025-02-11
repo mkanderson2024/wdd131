@@ -108,7 +108,7 @@ const aircrafts = [
 let containerAircraft = ".aircaft-container"
 createAircraftCard(aircrafts);
 
-function createAircraftCard(filteredAircraft, containerName) {
+function createAircraftCard(filteredAircraft) {
     filteredAircraft.forEach(aircraft => {
         let card = document.createElement("section");
         let name = document.createElement("h4");
@@ -178,6 +178,5 @@ function createAquaticCard(filteredNavalcraft) {
         card.appendChild(img);
 
         document.querySelector(".aquatic-container").appendChild(card);
-
     });
 }

@@ -172,7 +172,10 @@ footer {
 }
 
 /* ----------Picture Container---------- */
-.aircaft-container {
+.aircaft-container,
+.aquatic-container,
+.bases-container,
+.creative-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 1rem;
