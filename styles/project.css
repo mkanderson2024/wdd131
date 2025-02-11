@@ -4,6 +4,7 @@
     --heading-bg-color: #023e8a;
     --heading-tab-text: #ffffff;
     --decorative-border: #ffb703;
+    --card-background: rgb(169, 189, 206);
     --alternate-bg: rgb(44, 44, 44);
 
 }
@@ -171,13 +172,24 @@ footer {
 }
 
 /* ----------Picture Container---------- */
-.pictures-container {
+.aircaft-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 4rem;
+    grid-gap: 1rem;
     place-items: center;
     padding: 1rem;
     margin: 0 auto;
+}
+
+section {
+    background-color: var(--card-background);
+    padding: 5px;
+    border-radius: 1rem;
+}
+
+section img {
+    border: var(--decorative-border) solid;
+    border-radius: 1rem;
 }
 
 h4 {
@@ -187,7 +199,7 @@ h4 {
     padding: 10px;
     border-radius: 1rem;
     border-bottom: solid #ffb703 3px;
-    text-align: left;
+    text-align: center;
     font-family: "kanit";
 }
 
