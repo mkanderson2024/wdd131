@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEC Build Review</title>
+    <meta name="author" content="Michael Anderson">
+    <meta name="description" content="form assignment">
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project-review.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Kanit:wght@100;300;400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div class="review-page">
+            <header>
+                <h1>Review</h1>
+            </header>
+            <form method="get" action="thankyou.html" class="review">
+                <!-- Product Name -->
+                <fieldset>
+                    <legend>* Build Type</legend>
+                    <label>
+                        <select id="products" required>
+                            <option value="" selected disabled hidden>Choose Type....</option>
+                        </select></label>
+
+                </fieldset>
+                <!-- Ratings -->
+                <fieldset>
+                    <legend>* Overall Rating</legend>
+                    <label><input type="radio" name="rating" value="stars" required>⭐</label>
+                    <label><input type="radio" name="rating" value="stars" required>⭐⭐</label>
+                    <label><input type="radio" name="rating" value="stars" required>⭐⭐⭐</label>
+                    <label><input type="radio" name="rating" value="stars" required>⭐⭐⭐⭐</label>
+                    <label><input type="radio" name="rating" value="stars" required>⭐⭐⭐⭐⭐</label>
+                </fieldset>
+                <!-- Date of Instillation -->
+                <fieldset>
+                    <legend>* Date of build use:</legend>
+                    <label><input type="date" id="instillation-date" name="completedDate" required></label>
+                </fieldset>
+                <!-- Useful features -->
+                <fieldset>
+                    <legend>Useful Build Features:</legend>
+                    <h5>(Check all that apply)</h5>
+                    <label><input type="checkbox" name="durability" value="yes"> Durability </label>
+                    <label><input type="checkbox" name="use" value="yes"> Ease of Use </label>
+                    <label><input type="checkbox" name="performance" value="yes"> Performance </label>
+                    <label><input type="checkbox" name="design" value="yes"> Design </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Written Review</legend>
+                    <label><textarea id="text" name="text-box" rows="6" cols="50">Enter Text HERE</textarea></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Your Name</legend>
+                    <label><input type="text" id="user" name="name"></label>
+                </fieldset>
+                <input type="submit" value="Post Review">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p class="foot-text">© <span id="copyright-year"></span> Michael Anderson - Utah, USA</p>
+        <p id="lastModified">Last Modified: </p>
+        <p id="submissions">Submissions: </p>
+    </footer>
+</body>
+
+</html>

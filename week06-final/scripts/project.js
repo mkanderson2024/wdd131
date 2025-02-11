@@ -135,48 +135,4 @@ function createAircraftCard(filteredAircraft) {
 
         document.querySelector(".aircaft-container").appendChild(card);
     })
-}
-//Aquatic
-
-
-const navalcrafts = [
-    {
-        navalcraftName: "IEC Lance Destroyer",
-        pcu: "9728",
-        armor: "Heavy",
-        power: "Battery/Reactor",
-        imageURL:
-            "https://steamuserimages-a.akamaihd.net/ugc/1863954474570501586/7DA40E12B4E54C34191B7689D8B61D20000C99F4/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
-    }
-];
-
-createAquaticCard(navalcrafts);
-
-function createAquaticCard(filteredNavalcraft) {
-    filteredNavalcraft.forEach(navalcraft => {
-        let card = document.createElement("section");
-        let name = document.createElement("h4");
-        let pcu = document.createElement("p")
-        let armor = document.createElement("p")
-        let power = document.createElement("p")
-        let img = document.createElement("img")
-
-        name.innerHTML = `${navalcraft.navalcraftName}`;
-        pcu.innerHTML = `<span class="label">PCU:</span> ${navalcraft.pcu}`;
-        armor.innerHTML = `<span class="label">Armor:</span> ${navalcraft.armor}`;
-        power.innerHTML = `<span class="label">Power:</span> ${navalcraft.power}`;
-        img.setAttribute("src", navalcraft.imageURL);
-        img.setAttribute("alt", `${navalcraft.navalcraftName} Aircraft`);
-        img.setAttribute("loading", "lazy");
-        img.setAttribute("width", "200");
-        img.setAttribute("height", "150")
-
-        card.appendChild(name);
-        card.appendChild(pcu);
-        card.appendChild(armor);
-        card.appendChild(power);
-        card.appendChild(img);
-
-        document.querySelector(".aquatic-container").appendChild(card);
-    });
-}
+};
